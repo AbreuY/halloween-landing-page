@@ -51,6 +51,14 @@ export const Home = () => {
 		},
 		[playSound]
 	);
+	useEffect(
+		() => {
+			if (store.count == 5) {
+				alert("Felicidades completaste el reto 👏");
+			}
+		},
+		[store.count]
+	);
 	return (
 		<>
 			<div className="blair-container">
