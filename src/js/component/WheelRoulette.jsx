@@ -363,7 +363,7 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 						if (data[prizeNumber].option == "Trato") {
 							const question = selectQuestion();
 							setActualQuestion(question);
-						} else {
+						} else if (data[prizeNumber].option == "Truco") {
 							let oneOrZero = Math.random() >= 0.5 ? 1 : 0;
 							oneOrZero == 1 ? actions.setBodyAnimation() : actions.lindaBlair();
 							if (store.bodyAnimation) {
@@ -373,9 +373,6 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 						if (data[prizeNumber].option == "🍬") {
 							alert("Tienes mucha suerte, ganaste un caramelo gratis");
 							actions.candyCounter();
-						}
-						if (data[prizeNumber].option == "Truco") {
-							alert("Acá deberiamos asustar");
 						}
 					}}
 				/>

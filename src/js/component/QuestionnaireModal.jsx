@@ -13,16 +13,14 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 			resetQuestion(value);
 		}, 1000);
 	};
-	const handleClick = () => {
-
-	}
+	const handleClick = () => {};
 	useEffect(() => {});
 	return (
 		<div className="generic-modal-box">
 			<div className="modal-box">
 				<div className="modal__main">
 					<h2 className="modal__main--title">Trato 🍬</h2>
-					<p className="modal__main--question text-glow">{treat.question}</p>
+					<p className="modal__main--question">{treat.question}</p>
 				</div>
 				<div className="modal__answer">
 					<button
@@ -79,8 +77,7 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 							// setTimeout(() => {
 							// 	resetQuestion(undefined);
 							// }, 3800);
-						}}
-						>
+						}}>
 						{treat.optionThree.content}
 					</button>
 				</div>

@@ -19,7 +19,7 @@ export const InstructionsModal = () => {
 						{`Podrás encontrarte con trucos y sorpresas en el camino.  `}
 						<br />
 						<div className="text-center">
-							<span>BUENA SUERTE Y HAPPY HALLOWEN</span>
+							<span className="text-glow">BUENA SUERTE Y HAPPY HALLOWEN</span>
 						</div>
 					</li>
 				</ol>
