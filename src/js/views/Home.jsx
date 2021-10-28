@@ -13,17 +13,21 @@ export const Home = () => {
 	const [playSoundEffect, setSoundEffect] = useState(false);
 	const { store, actions } = useContext(AppContext);
 	const sound = new Audio(audio);
-	const handlePlaySound = soundStatus => {
-		if (playSound) {
-			//sound.currentTime = 80;
-			console.log("from play");
-			sound.play();
+	const handlePlaySound = async soundStatus => {
+		if (soundStatus) {
+			if (sound.status == 206) {
+				console.log("I returned");
+				return;
+			} else {
+				console.log("from play");
+				const terrorSound = await sound.play();
+			}
 		}
 	};
 
 	const rouletteSound = new Audio(roulette_sound);
 	const handleSoundEffec = soundStatus => {
-		if (playSoundEffect) {
+		if (soundStatus) {
 			setTimeout(() => {
 				rouletteSound.play();
 				sound.volume = 0.3;
@@ -36,11 +40,15 @@ export const Home = () => {
 				sound.volume = 1;
 			}
 
-			handlePlaySound(playSound);
 			handleSoundEffec(playSoundEffect);
-			console.log(store.count, "From useffect home");
 		},
-		[playSound, playSoundEffect]
+		[playSoundEffect]
+	);
+	useEffect(
+		() => {
+			handlePlaySound(playSound);
+		},
+		[playSound]
 	);
 	return (
 		<>

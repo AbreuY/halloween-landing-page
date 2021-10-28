@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Wheel } from "react-custom-roulette";
 import { QuestionnaireModal } from "./QuestionnaireModal.jsx";
 import { InstructionsModal } from "./InstructionsModal.jsx";
+import { AppContext } from "../store/appContext.js";
 
 export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEffect }) => {
 	const [mustSpin, setMustSpin] = useState(false);
 	const [prizeNumber, setPrizeNumber] = useState(0);
 	const [actualQuestion, setActualQuestion] = useState(undefined);
+	const { store, actions } = useContext(AppContext);
 
 	const data = [
 		{
-			option: "Trato",
+			option: "🍬",
 			style: {
 				textColor: "#FFFFFF"
 			}
@@ -29,12 +31,6 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 			}
 		},
 		{
-			option: "Truco",
-			style: {
-				textColor: "#FFFFFF"
-			}
-		},
-		{
 			option: "Trato",
 			style: {
 				textColor: "#FFFFFF"
@@ -42,6 +38,12 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 		},
 		{
 			option: "Truco",
+			style: {
+				textColor: "#FFFFFF"
+			}
+		},
+		{
+			option: "Trato",
 			style: {
 				textColor: "#FFFFFF"
 			}
@@ -362,6 +364,13 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 						if (data[prizeNumber].option == "Trato") {
 							const question = selectQuestion();
 							setActualQuestion(question);
+						}
+						if (data[prizeNumber].option == "🍬") {
+							alert("Tienes mucha suerte, ganaste un caramelo gratis");
+							actions.candyCounter();
+						}
+						if (data[prizeNumber].option == "Truco") {
+							alert("Acá deberiamos asustar");
 						}
 					}}
 				/>

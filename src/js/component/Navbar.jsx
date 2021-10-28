@@ -39,7 +39,7 @@ export const Navbar = () => {
 	useEffect(() => {}, []);
 	return (
 		<nav className="navbar navbar-expand-lg">
-			<div className="container-fluid">
+			<ul className="container-fluid d-flex space-between">
 				<a className="navbar-brand text-danger" href="#">
 					{store.count == 1
 						? "🍬"
@@ -53,26 +53,14 @@ export const Navbar = () => {
 										? "🍬🍬🍬🍬🍬"
 										: "Tienes 0 caramelos"}
 				</a>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon" />
-				</button>
-				<div className="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul className="navbar-nav ms-auto">
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								<h3 className="glitch" id="mytext" data-text="" />
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+				<ul className="navbar-nav ms-auto">
+					<li className="nav-item">
+						<a className="nav-link" href="#">
+							<h3 className="glitch" id="mytext" data-text="" />
+						</a>
+					</li>
+				</ul>
+			</ul>
 		</nav>
 	);
 };
