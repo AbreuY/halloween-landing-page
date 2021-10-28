@@ -13,7 +13,9 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 			resetQuestion(value);
 		}, 1000);
 	};
+	const handleClick = () => {
 
+	}
 	useEffect(() => {});
 	return (
 		<div className="generic-modal-box">
@@ -23,7 +25,7 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 					<p className="modal__main--question text-glow">{treat.question}</p>
 				</div>
 				<div className="modal__answer">
-					<p
+					<button
 						className={`modal__answer--option ${
 							optionOne ? "good-response" : optionOne == undefined ? "" : "bad-response"
 						}`}
@@ -42,8 +44,8 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 							// }, 3800);
 						}}>
 						{treat.optionOne.content}
-					</p>
-					<p
+					</button>
+					<button
 						className={`modal__answer--option ${
 							optionTwo ? "good-response" : optionTwo == undefined ? "" : "bad-response"
 						}`}
@@ -57,13 +59,10 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 								setOptionTwo(false);
 								handleResetQuestion(undefined);
 							}
-							// setTimeout(() => {
-							// 	resetQuestion(undefined);
-							// }, 3800);
 						}}>
 						{treat.optionTwo.content}
-					</p>
-					<p
+					</button>
+					<button
 						className={`modal__answer--option ${
 							optionThree ? "good-response" : optionThree == undefined ? "" : "bad-response"
 						}`}
@@ -80,9 +79,10 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 							// setTimeout(() => {
 							// 	resetQuestion(undefined);
 							// }, 3800);
-						}}>
+						}}
+						>
 						{treat.optionThree.content}
-					</p>
+					</button>
 				</div>
 			</div>
 		</div>

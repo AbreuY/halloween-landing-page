@@ -12,7 +12,7 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 
 	const data = [
 		{
-			option: "Trato",
+			option: "🍬",
 			style: {
 				textColor: "#FFFFFF"
 			}
@@ -30,12 +30,6 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 			}
 		},
 		{
-			option: "Truco",
-			style: {
-				textColor: "#FFFFFF"
-			}
-		},
-		{
 			option: "Trato",
 			style: {
 				textColor: "#FFFFFF"
@@ -43,6 +37,12 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 		},
 		{
 			option: "Truco",
+			style: {
+				textColor: "#FFFFFF"
+			}
+		},
+		{
+			option: "Trato",
 			style: {
 				textColor: "#FFFFFF"
 			}
@@ -369,6 +369,13 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 							if (store.bodyAnimation) {
 								actions.setBodyAnimation();
 							}
+						}
+						if (data[prizeNumber].option == "🍬") {
+							alert("Tienes mucha suerte, ganaste un caramelo gratis");
+							actions.candyCounter();
+						}
+						if (data[prizeNumber].option == "Truco") {
+							alert("Acá deberiamos asustar");
 						}
 					}}
 				/>
