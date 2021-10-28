@@ -4,7 +4,7 @@ export const InstructionsModal = () => {
 	return (
 		<div className="generic-modal-box">
 			<div className="modal-box">
-				<h1 className="modal__instructions--title">Roulette Landing Page</h1>
+				<h1 className="modal__instructions--title text-glow">Roulette Landing Page</h1>
 				<h3 className="modal__instructions">Instrucciones</h3>
 				<ol>
 					<li className="modal__instructions--li">

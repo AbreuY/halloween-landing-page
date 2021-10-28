@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Wheel } from "react-custom-roulette";
 import { QuestionnaireModal } from "./QuestionnaireModal.jsx";
 import { InstructionsModal } from "./InstructionsModal.jsx";
-
+import { AppContext } from "../store/appContext.js";
 export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEffect }) => {
 	const [mustSpin, setMustSpin] = useState(false);
 	const [prizeNumber, setPrizeNumber] = useState(0);
 	const [actualQuestion, setActualQuestion] = useState(undefined);
+	const { store, actions } = useContext(AppContext);
 
 	const data = [
 		{
@@ -362,6 +363,12 @@ export const WheelRoulette = ({ playSound, setSound, playSoundEffect, setSoundEf
 						if (data[prizeNumber].option == "Trato") {
 							const question = selectQuestion();
 							setActualQuestion(question);
+						} else {
+							let oneOrZero = Math.random() >= 0.5 ? 1 : 0;
+							oneOrZero == 1 ? actions.setBodyAnimation() : actions.lindaBlair();
+							if (store.bodyAnimation) {
+								actions.setBodyAnimation();
+							}
 						}
 					}}
 				/>

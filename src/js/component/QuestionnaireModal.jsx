@@ -19,8 +19,8 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 		<div className="generic-modal-box">
 			<div className="modal-box">
 				<div className="modal__main">
-					<h2 className="modal__main--title">Treat 🍬</h2>
-					<p className="modal__main--question">{treat.question}</p>
+					<h2 className="modal__main--title">Trato 🍬</h2>
+					<p className="modal__main--question text-glow">{treat.question}</p>
 				</div>
 				<div className="modal__answer">
 					<p

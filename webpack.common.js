@@ -29,7 +29,7 @@ module.exports = {
           }]
         }, //css only files
         {
-          test: /\.(png|svg|jpg|gif|jpeg|webp|mp3)$/, use: {
+          test: /\.(png|svg|jpg|gif|jpeg|webp|mp3|wav)$/, use: {
             loader: 'file-loader',
             options: { name: '[name].[ext]' }
           }
