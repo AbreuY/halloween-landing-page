@@ -10,6 +10,12 @@ const AppContextProvider = ({ children }) => {
 	});
 
 	const actions = {
+		resetCounter: () => {
+			setStore(prev => ({
+				...prev,
+				count: 0
+			}));
+		},
 		//Agrega un caramelo por cada respuesta correcta
 		candyCounter: () => {
 			setStore(prev => ({ ...prev, count: store.count + 1 }));

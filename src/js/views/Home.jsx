@@ -55,6 +55,7 @@ export const Home = () => {
 		() => {
 			if (store.count == 5) {
 				alert("Felicidades completaste el reto 👏");
+				actions.resetCounter();
 			}
 		},
 		[store.count]
