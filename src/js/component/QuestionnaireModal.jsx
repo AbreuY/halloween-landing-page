@@ -37,12 +37,13 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 			two.disabled = true;
 		}
 	};
+	const handleClick = () => {};
 	useEffect(() => {});
 	return (
 		<div className="generic-modal-box">
 			<div className="modal-box">
 				<div className="modal__main">
-					<h2 className="modal__main--title">Truco 🍬</h2>
+					<h2 className="modal__main--title">Trato 🍬</h2>
 					<p className="modal__main--question">{treat.question}</p>
 				</div>
 				<div className="modal__answer">

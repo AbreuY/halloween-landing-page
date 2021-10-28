@@ -8,7 +8,36 @@
 
 @import "./views/Home";
 
+ @keyframes weirdblur {
+   98% {
+     filter: blur(0);
+   }
+   99% {
+     filter: blur(50px)
+   };
+   100% {
+     filter: blur(0);
+   }
+ }
+ 
+ .blair-container {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   visibility: hidden;
+ }
 
+ .blair {
+   z-index: 10;
+   width: 100%;
+   position: relative;
+   margin: auto;
+ }
+ .text-glow {
+   text-shadow: 1px 1px 15px white;
+ }
 body,html {
    // height: 100%;
 /* The image used */
@@ -30,4 +59,5 @@ background-size: cover;
 // -moz-box-shadow: 0px 0px 5px 2px #282a2d;
 // -webkit-box-shadow: 0px 0px 5px 2px #282a2d;
 }
+
 

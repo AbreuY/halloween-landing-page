@@ -6,6 +6,7 @@ import audio from "./../../img/terror-v2.mp3";
 import roulette_sound from "./../../img/roulette_sound.mp3";
 import { WheelRoulette } from "../component/WheelRoulette.jsx";
 import { AppContext } from "../store/appContext";
+import linda_blair from "../../img/linda_blair.jpg";
 
 //create your first component
 export const Home = () => {
@@ -50,8 +51,19 @@ export const Home = () => {
 		},
 		[playSound]
 	);
+	useEffect(
+		() => {
+			if (store.count == 5) {
+				alert("Felicidades completaste el reto 👏");
+			}
+		},
+		[store.count]
+	);
 	return (
 		<>
+			<div className="blair-container">
+				<img className="blair" src={linda_blair} />
+			</div>
 			<div className="home">
 				<div className="">
 					<WheelRoulette

@@ -40,7 +40,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<ul className="container-fluid d-flex space-between">
-				<a className="navbar-brand text-danger" href="#">
+				<a className="navbar-brand text-white text-glow" href="#">
 					{store.count == 1
 						? "🍬"
 						: store.count == 2

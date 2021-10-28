@@ -4,7 +4,7 @@ export const InstructionsModal = () => {
 	return (
 		<div className="generic-modal-box">
 			<div className="modal-box">
-				<h1 className="modal__instructions--title">Roulette Landing Page</h1>
+				<h1 className="modal__instructions--title text-glow">Roulette Landing Page</h1>
 				<h3 className="modal__instructions">Instrucciones</h3>
 				<ol>
 					<li className="modal__instructions--li">
@@ -19,7 +19,7 @@ export const InstructionsModal = () => {
 						{`Podrás encontrarte con trucos y sorpresas en el camino.  `}
 						<br />
 						<div className="text-center">
-							<span>BUENA SUERTE Y HAPPY HALLOWEN</span>
+							<span className="text-glow">BUENA SUERTE Y HAPPY HALLOWEN</span>
 						</div>
 					</li>
 				</ol>
