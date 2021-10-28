@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { AppContext } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(AppContext);
 	window.addEventListener("DOMContentLoaded", event => {
-		console.log("DOM fully loaded and parsed");
-
 		const title = document.querySelector("title");
 		const glitchText = document.getElementById("mytext");
 
@@ -40,7 +40,19 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<div className="container-fluid">
-				<a className="navbar-brand text-danger" href="#" />
+				<a className="navbar-brand text-danger" href="#">
+					{store.count == 1
+						? "🍬"
+						: store.count == 2
+							? "🍬🍬"
+							: store.count == 3
+								? "🍬🍬🍬"
+								: store.count == 4
+									? "🍬🍬🍬🍬"
+									: store.count == 5
+										? "🍬🍬🍬🍬🍬"
+										: "Tienes 0 caramelos"}
+				</a>
 				<button
 					className="navbar-toggler"
 					type="button"

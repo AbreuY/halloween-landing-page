@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
+import { AppContext } from "../store/appContext";
 
 export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 	const [optionOne, setOptionOne] = useState(undefined);
 	const [optionTwo, setOptionTwo] = useState(undefined);
 	const [optionThree, setOptionThree] = useState(undefined);
 	const [optionFourth, setOptionFourth] = useState(undefined);
+	const { store, actions } = useContext(AppContext);
+	const handleResetQuestion = value => {
+		setTimeout(() => {
+			resetQuestion(value);
+		}, 1000);
+	};
+
+	useEffect(() => {});
 	return (
 		<div className="generic-modal-box">
 			<div className="modal-box">
@@ -21,13 +30,16 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 						onClick={e => {
 							if (treat.optionOne.correct) {
 								setOptionOne(true);
+								actions.candyCounter();
+								handleResetQuestion(undefined);
 							}
 							if (!treat.optionOne.correct) {
 								setOptionOne(false);
+								handleResetQuestion(undefined);
 							}
-							setTimeout(() => {
-								resetQuestion(undefined);
-							}, 3800);
+							// setTimeout(() => {
+							// 	resetQuestion(undefined);
+							// }, 3800);
 						}}>
 						{treat.optionOne.content}
 					</p>
@@ -38,13 +50,16 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 						onClick={e => {
 							if (treat.optionTwo.correct) {
 								setOptionTwo(true);
+								actions.candyCounter();
+								handleResetQuestion(undefined);
 							}
 							if (!treat.optionTwo.correct) {
 								setOptionTwo(false);
+								handleResetQuestion(undefined);
 							}
-							setTimeout(() => {
-								resetQuestion(undefined);
-							}, 3800);
+							// setTimeout(() => {
+							// 	resetQuestion(undefined);
+							// }, 3800);
 						}}>
 						{treat.optionTwo.content}
 					</p>
@@ -55,13 +70,16 @@ export const QuestionnaireModal = ({ treat, resetQuestion }) => {
 						onClick={e => {
 							if (treat.optionThree.correct) {
 								setOptionThree(true);
+								actions.candyCounter();
+								handleResetQuestion(undefined);
 							}
 							if (!treat.optionThree.correct) {
 								setOptionThree(false);
+								handleResetQuestion(undefined);
 							}
-							setTimeout(() => {
-								resetQuestion(undefined);
-							}, 3800);
+							// setTimeout(() => {
+							// 	resetQuestion(undefined);
+							// }, 3800);
 						}}>
 						{treat.optionThree.content}
 					</p>

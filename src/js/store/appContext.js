@@ -5,10 +5,14 @@ export const AppContext = createContext(undefined);
 
 const AppContextProvider = ({ children }) => {
 	const [store, setStore] = useState({
-		count: []
+		count: 0
 	});
 
-	const actions = {};
+	const actions = {
+		candyCounter: () => {
+			setStore(prev => ({ ...prev, count: store.count + 1 }));
+		}
+	};
 	const context = { store, actions };
 
 	return <AppContext.Provider value={context}>{children}</AppContext.Provider>;

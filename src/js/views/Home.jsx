@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 //include images into your bundle
 import PropTypes from "prop-types";
 import audio from "./../../img/terror-v2.mp3";
 import roulette_sound from "./../../img/roulette_sound.mp3";
-import { Navbar } from "../component/Navbar.jsx";
 import { WheelRoulette } from "../component/WheelRoulette.jsx";
+import { AppContext } from "../store/appContext";
 
 //create your first component
 export const Home = () => {
 	const [playSound, setPlaySound] = useState(false);
 	const [playSoundEffect, setSoundEffect] = useState(false);
-
+	const { store, actions } = useContext(AppContext);
 	const sound = new Audio(audio);
 	const handlePlaySound = soundStatus => {
 		if (playSound) {
@@ -38,12 +38,12 @@ export const Home = () => {
 
 			handlePlaySound(playSound);
 			handleSoundEffec(playSoundEffect);
+			console.log(store.count, "From useffect home");
 		},
 		[playSound, playSoundEffect]
 	);
 	return (
 		<>
-			<Navbar />
 			<div className="home">
 				<div className="">
 					<WheelRoulette
