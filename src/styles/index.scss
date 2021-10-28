@@ -1,3 +1,33 @@
-/* 
-    General Styles
-*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./components/WheelRoulette";
+@import "./components/GlitchTextDaysUntilHalloween";
+@import "./components/QuestionnaireModal";
+@import "./components/InstructionsModal";
+
+
+@import "./views/Home";
+
+
+body,html {
+   // height: 100%;
+/* The image used */
+background: linear-gradient(rgba(10,10,10,.6),rgba(10,10,10,.6)), 
+repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px),
+url("./../img/background_a.jpg") no-repeat center fixed;
+//background: url("./../img/background_a.jpg") no-repeat center fixed;
+background-size: cover;
+/* Full height */
+//height: 100%;
+/* Center and scale the image nicely */
+// background-position: center;
+// background-repeat: no-repeat;
+// background-size: cover;
+// -webkit-background-size: cover;
+// -moz-background-size: cover;
+// -o-background-size: cover;
+// box-shadow: 0px 0px 5px 2px #282a2d;
+// -moz-box-shadow: 0px 0px 5px 2px #282a2d;
+// -webkit-box-shadow: 0px 0px 5px 2px #282a2d;
+}
+

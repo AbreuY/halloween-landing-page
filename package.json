@@ -9,7 +9,8 @@
 	"scripts": {
 		"start": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 --port 3000",
 		"build": "webpack --config webpack.prod.js",
-		"deploy": "node deploy-to-github.js"
+		"deploy": "node deploy-to-github.js",
+		"postinstall": "npx patch-package"
 	},
 	"author": {
 		"name": "Alejandro Sanchez",
@@ -78,10 +79,14 @@
 	},
 	"dependencies": {
 		"bootstrap": "^5.1.1",
+		"patch-package": "^6.4.7",
+		"postinstall": "^0.7.4",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-custom-roulette": "git://github.com/AbreuY/react-custom-roulette.git#main",
 		"react-dom": "^16.8.4",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^5.2.0"
+		"react-router-dom": "^5.2.0",
+		"sass": "^1.43.4"
 	}
 }

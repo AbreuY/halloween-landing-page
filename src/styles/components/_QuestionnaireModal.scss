@@ -1,0 +1,108 @@
+@import './../variables.scss';
+
+.game-box {
+    display: flex;
+}
+.generic-modal-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 45vw;
+}
+.modal-box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 25rem;
+    max-width: 35rem;
+    min-height: 35rem;
+    width: 35vw;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 3rem;
+
+}
+.modal__main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    h2 {
+        font-size: 1.2rem;
+        color: white;
+        background-color: rgb(136, 30, 228);
+        font-weight: 700;
+        padding: 0.4rem 1rem;
+        border-radius: 3rem;
+
+    }
+    p {
+        color: white;
+    }
+}
+.modal__main--question {
+    width: 90%;
+    background-color: rgb(51, 51, 51);
+    border-radius: 3rem;
+    color: white;
+    padding: 0.4rem 1rem;
+    font-family: 'Ronboto Slob';
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+.modal__answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: auto;
+    font-family: 'Ronboto Slob';
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+.modal__answer--option {
+    width: 70%;
+    background-color: rgb(51, 51, 51);
+    border-radius: 3rem;
+    color: white;
+    padding: 0.4rem 1rem;
+
+    &:hover {
+       // background-color: rgba(136, 30, 228, 0.329);
+       cursor: pointer;
+    }
+}
+.good-response {
+    background-color: rgb(133, 226, 31);
+    color: white;
+}
+.bad-response {
+    background-color: rgb(226, 31, 31);
+    color: white;
+}
+
+@media (max-width: 940px) {
+    body {
+        height:100vh;
+    }
+
+    .game-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .generic-modal-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        padding-top: 10vh;
+    }
+}
