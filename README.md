@@ -15,7 +15,7 @@ To develop this small site we use:
  * [Aaron2301](https://github.com/Aaron2301)
  * [bryanstg](https://github.com/bryanstg)
  * [AbreuY](https://github.com/AbreuY)
- * 
+ 
 ### Requirements to run this project:
 - Make sure you are using node version >=10
 
