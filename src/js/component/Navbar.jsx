@@ -44,14 +44,14 @@ export const Navbar = () => {
 					{store.count == 1
 						? "🍬"
 						: store.count == 2
-							? "🍬🍬"
-							: store.count == 3
-								? "🍬🍬🍬"
-								: store.count == 4
-									? "🍬🍬🍬🍬"
-									: store.count == 5
-										? "🍬🍬🍬🍬🍬"
-										: "Tienes 0 caramelos"}
+						? "🍬🍬"
+						: store.count == 3
+						? "🍬🍬🍬"
+						: store.count == 4
+						? "🍬🍬🍬🍬"
+						: store.count == 5
+						? "🍬🍬🍬🍬🍬"
+						: "Tienes 0 caramelos"}
 				</a>
 				<ul className="navbar-nav ms-auto">
 					<li className="nav-item">

@@ -35,31 +35,22 @@ export const Home = () => {
 			}, 2000);
 		}
 	};
-	useEffect(
-		() => {
-			if (!playSoundEffect) {
-				sound.volume = 1;
-			}
+	useEffect(() => {
+		if (!playSoundEffect) {
+			sound.volume = 1;
+		}
 
-			handleSoundEffec(playSoundEffect);
-		},
-		[playSoundEffect]
-	);
-	useEffect(
-		() => {
-			handlePlaySound(playSound);
-		},
-		[playSound]
-	);
-	useEffect(
-		() => {
-			if (store.count == 5) {
-				alert("Felicidades completaste el reto 👏");
-				actions.resetCounter();
-			}
-		},
-		[store.count]
-	);
+		handleSoundEffec(playSoundEffect);
+	}, [playSoundEffect]);
+	useEffect(() => {
+		handlePlaySound(playSound);
+	}, [playSound]);
+	useEffect(() => {
+		if (store.count == 5) {
+			alert("Felicidades completaste el reto 👏");
+			actions.resetCounter();
+		}
+	}, [store.count]);
 	return (
 		<>
 			<div className="blair-container">
