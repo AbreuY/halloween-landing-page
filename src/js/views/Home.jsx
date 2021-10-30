@@ -21,7 +21,7 @@ export const Home = () => {
 				return;
 			} else {
 				//console.log("from play");
-				const terrorSound = await sound.play();
+				sound.play();
 			}
 		}
 	};
