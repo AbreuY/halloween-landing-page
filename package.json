@@ -1,4 +1,6 @@
 {
+	"homepage": "https://AbreuY.github.io/halloween-landing-page/",
+
 	"name": "react-hello-webapp",
 	"engines": {
 		"node": "14.x"
