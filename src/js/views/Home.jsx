@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 
 //include images into your bundle
 import PropTypes from "prop-types";
-import audio from "./../../img/terror-v2.mp3";
-import roulette_sound from "./../../img/roulette_sound.wav";
+import audio from "../../img/terror_v2.mp3";
+import roulette_sound from "../../img/roulette_sound.wav";
 import { WheelRoulette } from "../component/WheelRoulette.jsx";
 import { AppContext } from "../store/appContext";
 import linda_blair from "../../img/linda_blair.jpg";
@@ -21,7 +21,14 @@ export const Home = () => {
 				return;
 			} else {
 				//console.log("from play");
-				sound.play();
+				sound
+					.play()
+					.then(() => {
+						// Audio is playing.
+					})
+					.catch(error => {
+						console.log(error, "From play");
+					});
 			}
 		}
 	};
