@@ -1,5 +1,10 @@
 # Halloween Landing Page Roulette 🎃👻🕯️
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4720c707-fc67-48a0-812c-c9ec90494cfd/deploy-status)](https://app.netlify.com/sites/halloween-landing-page/deploys)
+
+ * [DEMO](https://halloween-landing-page.netlify.app/)
+
+
 ### About the project
 This is a small project made to participate in the [*#aCodingHalloween*](https://www.eventbrite.com/e/a-coding-halloween-challenge-tickets-191279822097) Challenge Organized by [4GeeksAcademy](https://github.com/4GeeksAcademy)
 
