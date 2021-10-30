@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 //include images into your bundle
 import PropTypes from "prop-types";
 import audio from "./../../img/terror-v2.mp3";
-import roulette_sound from "./../../img/roulette_sound.mp3";
+import roulette_sound from "./../../img/roulette_sound.wav";
 import { WheelRoulette } from "../component/WheelRoulette.jsx";
 import { AppContext } from "../store/appContext";
 import linda_blair from "../../img/linda_blair.jpg";
@@ -17,10 +17,10 @@ export const Home = () => {
 	const handlePlaySound = async soundStatus => {
 		if (soundStatus) {
 			if (sound.status == 206) {
-				console.log("I returned");
+				//console.log("I returned");
 				return;
 			} else {
-				console.log("from play");
+				//console.log("from play");
 				const terrorSound = await sound.play();
 			}
 		}
